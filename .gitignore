@@ -1,0 +1,4 @@
+pt2/**/*.yaml
+pt2/**/*.md
+pt2/**/build/
+pt2/**/out/

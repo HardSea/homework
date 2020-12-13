@@ -1,0 +1,42 @@
+{
+  "adult": true,
+  "familyCount": 7,
+  "name": "Artem",
+  "age": 20,
+  "mother": {
+    "adult": true,
+    "familyCount": 5,
+    "name": "Maria",
+    "age": 41,
+    "mother": {
+      "adult": true,
+      "familyCount": 1,
+      "name": "Lyba",
+      "age": 61
+    },
+    "father": {
+      "adult": true,
+      "familyCount": 2,
+      "name": "Vitaliy",
+      "age": 63
+    }
+  },
+  "father": {
+    "adult": true,
+    "familyCount": 6,
+    "name": "Oleksandr",
+    "age": 42,
+    "mother": {
+      "adult": true,
+      "familyCount": 3,
+      "name": "Anna",
+      "age": 73
+    },
+    "father": {
+      "adult": true,
+      "familyCount": 4,
+      "name": "Anatoliy",
+      "age": 75
+    }
+  }
+}

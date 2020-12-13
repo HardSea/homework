@@ -1,4 +1,4 @@
-import java.io.File
+﻿import java.io.File
 import com.google.gson.Gson
 import java.io.InputStream
 
@@ -62,15 +62,18 @@ fun secondExample() {
     println("——————————Second Example——————————")
     val gson = Gson()
 
+    try {
+        val inputStream: InputStream = File("person.json").inputStream()
+        val inputString = inputStream.bufferedReader().use { it.readText() }.toString()
 
-    val inputStream: InputStream = File("person.json").inputStream()
-    val inputString = inputStream.bufferedReader().use { it.readText() }.toString()
+        val meDeserialized: Person = gson.fromJson<Person>(inputString, Person::class.java)
 
-    val meDeserialized: Person = gson.fromJson<Person>(inputString, Person::class.java)
-
-    println(meDeserialized.toString())
-    println("Mother's mother's name — " + meDeserialized.mother?.mother?.name)
-    println("Father's mother's name — " + meDeserialized.father?.mother?.age)
+        println(meDeserialized.toString())
+        println("Mother's mother's name — " + meDeserialized.mother?.mother?.name)
+        println("Father's mother's name — " + meDeserialized.father?.mother?.age)
+    } catch (e: Exception){
+        println("Need to change the project settings")
+    }
 
     println("—————————————————————————————————")
     println()
